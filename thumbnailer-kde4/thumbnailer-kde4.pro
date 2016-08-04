@@ -30,7 +30,7 @@ QMAKE_DEL_DIR += --ignore-fail-on-non-empty #Suppress rmdir errors "Directory no
 
 kde4thumblib.path  = "/usr/lib/kde4"
 kde4thumblib.files = "libembroidery-thumbnailer-kde4.so"
-kde4thumblib.extra = "strip libembroidery-thumbnailer-kde4.so; cp -f libembroidery-thumbnailer-kde4.so /usr/lib/kde4/libembroidery-thumbnailer-kde4.so" #ensure the binary gets stripped of debug symbols
+kde4thumblib.extra = "strip libembroidery-thumbnailer-kde4.so; cp -f libembroidery-thumbnailer-kde4.so $(INSTALL_ROOT)/usr/lib/kde4/libembroidery-thumbnailer-kde4.so" #ensure the binary gets stripped of debug symbols
 
 kde4thumbdesk.path  = "/usr/share/kde4/services"
 kde4thumbdesk.files = "libembroidery-thumbnailer-kde4.desktop"
@@ -40,7 +40,7 @@ kde4thumbpix.files = "../project-files/debian/data/usr/share/pixmaps/embroidermo
 
 kde4thumbmime.path  = "/usr/share/mime/packages"
 kde4thumbmime.files = "x-embroidermodder.xml"
-kde4thumbmime.extra = "cp -f x-embroidermodder.xml /usr/share/mime/packages/x-embroidermodder.xml; update-mime-database /usr/share/mime"
+kde4thumbmime.extra = "cp -f x-embroidermodder.xml $(INSTALL_ROOT)/usr/share/mime/packages/x-embroidermodder.xml; update-mime-database $(INSTALL_ROOT)/usr/share/mime"
 
 kde4rebuildcache.path     = $$PWD
 kde4rebuildcache.commands = kbuildsycoca4 2> /dev/null
