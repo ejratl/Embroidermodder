@@ -160,11 +160,11 @@ QMAKE_DEL_DIR += --ignore-fail-on-non-empty #Suppress rmdir errors "Directory no
 
 embapp.path  = "/usr/share/embroidermodder2"
 embapp.files = "embroidermodder2"
-embapp.extra = "strip embroidermodder2; cp -f embroidermodder2 /usr/share/embroidermodder2/embroidermodder2" #ensure the binary gets stripped of debug symbols
+embapp.extra = "strip embroidermodder2; cp -f embroidermodder2 $(INSTALL_ROOT)/usr/share/embroidermodder2/embroidermodder2" #ensure the binary gets stripped of debug symbols
 
 embtips.path  = "/usr/share/embroidermodder2"
 embtips.files = "tips.txt"
-embtips.extra = "cp -f tips.txt /usr/share/embroidermodder2/tips.txt"
+embtips.extra = "cp -f tips.txt $(INSTALL_ROOT)/usr/share/embroidermodder2/tips.txt"
 
 embcommands.path  = "/usr/share/embroidermodder2"
 embcommands.files = "commands"
