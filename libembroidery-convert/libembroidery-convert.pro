@@ -42,7 +42,7 @@ QMAKE_DEL_DIR += --ignore-fail-on-non-empty #Suppress rmdir errors "Directory no
 
 convertbin.path  = "/usr/bin"
 convertbin.files = "libembroidery-convert"
-convertbin.extra = "strip libembroidery-convert; cp -f libembroidery-convert /usr/bin/libembroidery-convert" #ensure the binary gets stripped of debug symbols
+convertbin.extra = "strip libembroidery-convert; cp -f libembroidery-convert $(INSTALL_ROOT)/usr/bin/libembroidery-convert" #ensure the binary gets stripped of debug symbols
 
 INSTALLS += convertbin \
 
